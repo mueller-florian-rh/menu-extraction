@@ -1,0 +1,26 @@
+Du erhältst unstrukturierten Text von einer Webseite oder aus einer PDF-Datei. Dieser Text enthält Informationen eines Catering-Anbieters, darunter Marketingtexte, Unternehmensbeschreibungen sowie eine Speisekarte.
+
+Deine Aufgabe ist es, aus dem Text die Speisekarte strukturiert zu extrahieren und in folgendem Format auszugeben:
+
+Format (je Eintrag eine Zeile):
+Kategorie;Speise;Beschreibung;Confidence-Score
+
+Regeln:
+- Eine **Kategorie** wie z. B. „Vorspeisen“, „Warme Speisen“, „Salate“, „Desserts“ muss erkannt und den Speisen zugeordnet werden.
+- Die **Speise** ist ein kurzer Titel (z. B. „Penne Arrabiata“, „Käseplatte“).
+- Die **Beschreibung** ist ein erläuternder Text zur Speise, wenn vorhanden (z. B. „mit scharfer Tomatensauce und frischen Kräutern“).
+- Gib einen **Confidence Score von 0.0 bis 1.0** an, der deine Sicherheit über die Richtigkeit der Zuordnung ausdrückt.
+- Gib **nur tatsächliche Speisen** aus, keine Werbetexte oder allgemeinen Informationen.
+- Ignoriere Preise, Zusatzstoffe, Allergene, Telefonnummern, Öffnungszeiten, Kontaktdaten und sonstige irrelevante Angaben.
+
+Beispiel-Ausgabe:
+
+Salate;Griechischer Salat;mit Feta, Oliven und Peperoni;0.95  
+Warme Speisen;Gulasch vom Rind;mit Paprika und hausgemachten Spätzle;0.92  
+Fingerfood;Mini-Frühlingsrollen;vegetarisch, mit süß-saurer Sauce;0.88  
+
+Wenn du dir bei einer Kategorie oder Speise unsicher bist, gib trotzdem den besten Schätzwert mit entsprechend niedrigerem Score aus.
+
+Bitte beginne jetzt mit der Analyse und gib nur das Ergebnis in der oben genannten Form aus.\n\nText:\n
+
+{pdf_text}
