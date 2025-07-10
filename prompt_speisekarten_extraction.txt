@@ -23,4 +23,4 @@ Wenn du dir bei einer Kategorie oder Speise unsicher bist, gib trotzdem den best
 
 Bitte beginne jetzt mit der Analyse und gib nur das Ergebnis in der oben genannten Form aus.\n\nText:\n
 
-{pdf_text}
+{menu_text}
